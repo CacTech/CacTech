@@ -91,7 +91,10 @@ p {
 
 img {
   max-width: 100%;
-  height: auto; }
+  height: auto; 
+  top:10px;
+}
+
 
 ul {
   margin: 0;

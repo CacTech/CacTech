@@ -1,589 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+<title>Noize Nación | Radio Electrónica en México</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000" />
+<meta name="title" content="Noize Nación | Radio Electrónica en México"/>
+<meta name="description" content="Emisora De Radio Open Source que difunde lo mejor y más actual en música electrónica por Internet las 24 horas del día, Transmitiendo desde Nueva Rosita Coahuila México.">
+<meta name="keywords" content="Radio Electrónica en México, Radio Electrónica México">
+<meta name="author" content="Orlando Hernandez Cruz - @OrlandoHC | Masterk3y">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="./assets/css/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="ism/css/my-slider.css"/>
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/nnacion_ico.png"> 
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/nnicon32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/img/nnicon16x16.png">
+<link rel="shortcut icon" href="./assets/img/nnicon32x32.ico">
+<script src="ism/js/ism-2.2.min.js"></script>
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5cf948294351e9001264f8cc&product=social-analytics' async='async'></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Title -->
-    <title>Area 57 - Hosting Coahuila</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="./img/core-img/favicon.png">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-
-</head>
-
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.3"></script>
+<style>
+body {font-family: "Lato", sans-serif}
+.container { width: auto; margin: auto; padding-top: 0em; }
+.container .ism-slider { margin-left: auto; margin-right: auto; }
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+</style>
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader"></div>
+<script>
+if ('serviceWorker' in navigator) {
+   window.addEventListener('load', function() {
+     navigator.serviceWorker.register('./sw.js').then(function(registration) {
+       // Si es exitoso
+       console.log('SW registrado correctamente');
+     }, function(err) {
+       // Si falla
+       console.log('SW fallo', err);
+     });
+   });
+ }
+</script>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Inicio</a>
+    <a href="#schedule" class="w3-bar-item w3-button w3-padding-large">Programas</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Streams</a>
+    <a href="#wiki" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Wiki</a>
+    <a href="#social" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contacto</a>
+    <!--<div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Merchandise</a>
+        <a href="#" class="w3-bar-item w3-button">Extras</a>
+        <a href="#" class="w3-bar-item w3-button">Media</a>
+      </div>
     </div>
-    <!-- /Preloader -->
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>-->
+  </div>
+</div>
 
-    <!-- Header Area Start -->
-    <header class="header-area">
-        <!-- Top Header Area Start -->
-        <!-- Top Header Area End -->
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Streams</a>
+  <a href="#wiki" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Wiki</a>
+  <a href="#social" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contacto</a>
+</div>
 
-        <!-- Main Header Start -->
-        <div class="main-header-area">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
-                    <!-- Classy Menu -->
-                    <nav class="classy-navbar justify-content-between" id="hamiNav">
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:45px">
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <img src="./assets/img/logo.png" class="responsive"alt="Logo Noize Nación">
+   <h3 class="w3-justify">Radio Open Source que difunde lo mejor y más actual en música electrónica las 24 horas del día, Transmitiendo por internet desde Saltillo Coahuila México.</h3>
+   <div id="streams" class="w3-container  w3-center w3-xlarge" id="contact">
+    <h2 class="w3-container w3-center w3-xlarge">Streams Disponibles</h2>
+    <a href="http://198.24.145.146:9608/stream"><i class="fa fa-file-audio-o w3-hover-opacity"></i></a>
+    <a href="#"><i class="fa fa-chrome w3-hover-opacity"></i></a>
+    <a href="http://198.24.145.146:9608/stream" target="_blank"><i class="fa fa-html5 w3-hover-opacity"></i></a>
+    <a href="vr/"><i class="fa fa-vr-cardboard w3-hover-opacity"></i></a>
+    </div>
+    <br>
+        <h4>Streams de Prueba</h4>
+    <p>Noize Nación Concepto <a href="vr/" target="_blank">VR Innmersivo</a></p>
+  </div>
 
-                        <!-- Logo -->
-                        <div class="welcome-text mb-50"><a href="index.html"><img src="./img/core-img/logo.png"></a></div>
+  <div>
+      <h2 id="schedule" class="w3-center w3-xlarge">Programación Semanal</h2>
+      <h4 class="w3-center w3-opacity">Lo mas reciente de tus DJs Favoritos</h4>
 
-                        <!-- Navbar Toggler -->
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"><span></span><span></span><span></span></span>
-                        </div>
+     <!-- SLIDER -->
+     <div  class='container'>
 
-                        <!-- Menu -->
-                        <div class="classy-menu">
-                            <!-- Menu Close Button -->
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                            </div>
-                            <!-- Nav Start -->
-                            <div class="classynav">
-                                <ul id="nav">
-                                    <li class="active"><a href="./index.html">Inicio</a></li>
-                                    <li><a href="./hosting.html">Hosting</a></li>
-                                    <li><a href="./hosting.html">Desarrollo Web</a></li>
+      <div class="ism-slider" data-play_type="loop" data-interval="10000" data-radios="false" id="noizenacion">
+        <ol>
+          <li>
+            <img src="ism/image/slides/_u/1559672706182_348801.jpg">
+            <div class="ism-caption ism-caption-0">Group Therapy | Viernes 21:00 Horas</div>
+          </li>
+          <li>
+            <img src="ism/image/slides/_u/1559672823133_603463.jpg">
+            <div class="ism-caption ism-caption-0">Tiesto´s - Club Life | Sábados 13:00 Horas</div>
+          </li>
+          <li>
+            <img src="ism/image/slides/_u/1560006357093_536919.jpg">
+            <div class="ism-caption ism-caption-0">Diplo &amp; Friends | Sábados 17:00 Horas (En Vivo)</div>
+          </li>
+          <li>
+            <img src="ism/image/slides/_u/1560006356658_479397.jpg">
+            <div class="ism-caption ism-caption-0">Festa Bros - Brothers | Sábados 20:00 Horas (En Vivo)</div>
+          </li>
+          <li>
+            <img src="ism/image/slides/_u/1560006716897_493396.jpg">
+            <div class="ism-caption ism-caption-0">Sábados 22:00 Horas (En Vivo)</div>
+          </li>
+          <li>
+            <img src="ism/image/slides/_u/1559787577659_331177.jpg">
+            <div class="ism-caption ism-caption-0">Top 15 Electro | Lunes a Viernes 12:00 y 20:00 Horas</div>
+          </li>
+        </ol>
+      </div>
 
-                                   <!--  <li><a href="#">Sitios</a>
-                                        <ul class="dropdown">
-                                            <li><a href="./index.html">- Inicio</a></li>
-                                            <li><a href="./hosting.html">- Hosting</a></li>
-                                            <li><a href="./about.html">- Acerca</a></li>
-                                            <li><a href="./coming-soon.html">- Proximamente</a></li>
-                                            <li><a href="#">- Dropdown</a>
-                                                <ul class="dropdown">
-                                                    <li><a href="#">- Dropdown Item</a></li>
-                                                    <li><a href="#">- Dropdown Item</a></li>
-                                                    <li><a href="#">- Dropdown Item</a></li>
-                                                    <li><a href="#">- Dropdown Item</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>-->
-                                    <li><a href="./about.html">Acerca De:</a></li>
-                                    <li><a href="#">Contacto</a></li>
-                                </ul>
+  <!-- SLIDER -->
+    </div>
+  </div>
+  <!-- The Tour Section -->
+  <div class="w3-black">
+    <div id="wiki" class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2  class="w3-xlarge w3-center">Historia</h2>
+      <h3 align="justify" class="historia"><i>"Proyecto que nace en Agosto de 2015 a partir de la idea de llevar a los oídos de todo el mundo, lo mejor, más actual, conocido y desconocido en música electrónica, creada por <a href="https://orlandohc.me" target="_blank">OrlandoHC (aka Masterk3y)</a>; Iniciando transmisiones en la pequeña ciudad de Nueva Rosita y posteriormente trasladándose a la ciudad de Saltillo en el estado de Coahuila, Noize Nacion es la única Estación de Radio 100% de Música Electrónica en el Norte de México y hoy se posiciona en los primeros lugares de popularidad siendo del agrado de los radioescuchas, Sé parte de la Nación del Ruido."</i></h3>
 
-                                <!-- Live Chat -->
-                            </div>
-                            <!-- Nav End -->
-                        </div>
-                    </nav>
-                </div>
-            </div>
+      <!--<div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <div class="w3-container w3-white">
+            <p><b>New York</b></p>
+            <p class="w3-opacity">Fri 27 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
         </div>
-    </header>
-    <!-- Header Area End -->
-
-    <!-- Welcome Area Start -->
-    <section class="welcome-area">
-
-        <!-- Welcome Pattern -->
-        <div class="welcome-pattern">
-            <img src="img/core-img/welcome-pattern.png" alt="">
+        <div class="w3-third w3-margin-bottom">
+          <div class="w3-container w3-white">
+            <p><b>Paris</b></p>
+            <p class="w3-opacity">Sat 28 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
         </div>
-
-        <!-- Welcome Slide -->
-        <div class="welcome-slides owl-carousel">
-
-            <!-- Single Welcome Slide -->
-            <div class="single-welcome-slide">
-                <!-- Welcome Content -->
-                <div class="welcome-content h-100">
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-center">
-                            <!-- Welcome Text -->
-                            <div class="col-12 col-md-9 col-lg-7">
-                                <div class="welcome-text mb-50">
-                                    <h2 data-animation="fadeInLeftBig" data-delay="200ms" data-duration="1s">Cloud <br> Hosting</h2>
-                                    <h3 data-animation="fadeInLeftBig" data-delay="400ms" data-duration="1s">Planes desde <span>$400</span> $200/Mes *</h3>
-                                    <p data-animation="fadeInLeftBig" data-delay="600ms" data-duration="1s">Hosting Compartido, VPS, Cloud XaaS, MaaS, PaaS...</p>
-                                    <a href="#" class="btn hami-btn btn-2" data-animation="fadeInLeftBig" data-delay="800ms" data-duration="1s">Saber Mas!</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Welcome Thumbnail -->
-                <div class="welcome-thumbnail">
-                    <img src="img/bg-img/1.png" alt="">
-                </div>
-            </div>
-
-            <!-- Single Welcome Slide -->
-            <div class="single-welcome-slide">
-                <!-- Welcome Content -->
-                <div class="welcome-content h-100">
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-center">
-                            <!-- Welcome Text -->
-                            <div class="col-12 col-md-9 col-lg-7">
-                                <div class="welcome-text mb-50">
-                                    <h2 data-animation="fadeInUpBig" data-delay="200ms" data-duration="1s">Desarollo <br> Web</h2>
-                                    <h3 data-animation="fadeInUpBig" data-delay="400ms" data-duration="1s">Planes desde <span>$200</span> $100 / Mes *</h3>
-                                    <p data-animation="fadeInUpBig" data-delay="600ms" data-duration="1s">Soporte HTML5, JS, PHP 8, MySQL!</p>
-                                    <a href="#" class="btn hami-btn btn-2" data-animation="fadeInUpBig" data-delay="800ms" data-duration="1s">Get Start Now!</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Welcome Thumbnail -->
-                <div class="welcome-thumbnail">
-                    <img src="img/bg-img/2.png" alt="">
-                </div>
-            </div>
-
+        <div class="w3-third w3-margin-bottom">
+          <div class="w3-container w3-white">
+            <p><b>San Francisco</b></p>
+            <p class="w3-opacity">Sun 29 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
         </div>
+      </div>-->
 
-        <!-- Clouds -->
-        <div class="clouds">
-            <img src="img/core-img/cloud-1.png" alt="" class="cloud-1">
-            <img src="img/core-img/cloud-2.png" alt="" class="cloud-2">
-            <img src="img/core-img/cloud-3.png" alt="" class="cloud-3">
-            <img src="img/core-img/cloud-4.png" alt="" class="cloud-4">
-            <img src="img/core-img/cloud-5.png" alt="" class="cloud-5">
-        </div>
-    </section>
-    <!-- Welcome Area End -->
+    </div>
+  </div>
 
-    <!-- Find Domain Area Start -->
-    <section class="find-domain-area section-padding-100-0">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-4">
-                    
-                </div>
-                <div class="col-12 col-md-8">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Find Domain Area End -->
 
-    <!-- Features Area Start -->
-    <section class="hami-features-area bg-gray section-padding-100">
-        <div class="container">
-            <div class="row">
-                <!-- Section Heading -->
-                <div class="col-12">
-                    <div class="section-heading text-center">
-                        <h2>Caracteristicas Generales</h2>
-                        <p>Potencia, Ágilidad y Seguridad a muy bajo costo.</p>
-                    </div>
-                </div>
-            </div>
+  <div id="social" class="w3-container w3-padding-32 w3-center w3-light-grey w3-xlarge" id="contact">
+      <h2 class="w3-container w3-center w3-light-grey w3-xlarge">Comparte Noize Nación</h2>
+      <div class="sharethis-inline-share-buttons" style="max-width:800px;margin:auto;"></div>
+      </div>
+  <!-- The Contact Section -->
+  <div id="social" class="w3-container w3-center w3-light-grey w3-xlarge" id="contact">
+    <h2 class="w3-container w3-center w3-light-grey w3-xlarge">Contacto</h2>
+    <div class="fb-like" data-href="https://www.facebook.com/noizenacion/" data-width="" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+    <br>
+    <a href="https://www.facebook.com/Noize-Naci%C3%B3n-Open-Source-Radio-1139419692806673/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://twitter.com/orlandohc" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+    <a href="https://github.com/OrlandoHC/noizenacion" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
+    <a href="mailto:contacto@noizenacion.com" target="_blank"><i class="fa fa-envelope w3-hover-opacity"></i></a>
+    <a href="tel://8121251887"><i class="fa fa-phone w3-hover-opacity"></i></a>
+    <a href="https://wa.me/528121251887"><i class="fa fa-whatsapp w3-hover-opacity"></i></a>
 
-            <div class="row">
+    <br>
+    <br>
 
-                <!-- Single Feature Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-feature-area d-flex mb-50">
-                        <div class="feature-icon">
-                            <i class="icon_cloud-upload_alt"></i>
-                        </div>
-                        <div class="feature-text">
-                            <h5>Respaldos Automaticos</h5>
-                            <p>Don't be distracted by criticism. Remember the only taste of success some people.</p>
-                        </div>
-                    </div>
-                </div>
+  </div>  
+  </div>
+  <!-- End Page Content -->
 
-                <!-- Single Feature Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-feature-area d-flex mb-50">
-                        <div class="feature-icon">
-                            <i class="icon_adjust-vert"></i>
-                        </div>
-                        <div class="feature-text">
-                            <h5>Optimización de Código</h5>
-                            <p>Don't be distracted by criticism. Remember the only taste of success some people.</p>
-                        </div>
-                    </div>
-                </div>
+<!--<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  </footer>-->
+<!-- Image of location/map -->
+<img src="./assets/img/footer.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 
-                <!-- Single Feature Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-feature-area d-flex mb-50">
-                        <div class="feature-icon">
-                            <i class="icon_archive_alt"></i>
-                        </div>
-                        <div class="feature-text">
-                            <h5>Respaldos Diarios</h5>
-                            <p>Don't be distracted by criticism. Remember the only taste of success some people.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Feature Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-feature-area d-flex mb-50">
-                        <div class="feature-icon">
-                            <i class="icon_globe-2"></i>
-                        </div>
-                        <div class="feature-text">
-                            <h5>Red Dedicada</h5>
-                            <p>Don't be distracted by criticism. Remember the only taste of success some people.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Feature Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-feature-area d-flex mb-50">
-                        <div class="feature-icon">
-                            <i class="icon_shield"></i>
-                        </div>
-                        <div class="feature-text">
-                            <h5>Seguridad</h5>
-                            <p>Don't be distracted by criticism. Remember the only taste of success some people.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Feature Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-feature-area d-flex mb-50">
-                        <div class="feature-icon">
-                            <i class="icon_headphones"></i>
-                        </div>
-                        <div class="feature-text">
-                            <h5>Soporte Técnico</h5>
-                            <p>Don't be distracted by criticism. Remember the only taste of success some people.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Feature Pattern -->
-        <div class="feature-pattern">
-            <img src="img/core-img/welcome-pattern.png" alt="">
-        </div>
-    </section>
-    <!-- Features Area End -->
-
-    <!-- Price Plan Area Start -->
-    <section class="hami-price-plan-area mt-50">
-        <div class="container">
-            <div class="row">
-                <!-- Section Heading -->
-                <div class="col-12">
-                    <div class="section-heading text-center">
-                        <h2>Elige tu Plan</h2>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-
-                <!-- Single Price Plan -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-price-plan mb-100">
-                        <!-- Title -->
-                        <div class="price-plan-title">
-                            <h4>Gratuito</h4>
-                            <p>Incluye Publicidad</p>
-                        </div>
-                        <!-- Value -->
-                        <div class="price-plan-value">
-                            <h2><span>$</span>0</h2>
-                            <p>/ Mes</p>
-                        </div>
-                        <!-- Button -->
-                        <a href="#" class="btn hami-btn w-100 mb-30">Seleccionar</a>
-                        <!-- Description -->
-                        <div class="price-plan-desc">
-                            <p><i class="icon_check"></i> 1 Sitio Web Estático</p>
-                            <p><i class="icon_check"></i> 2 Cuentas de Correo Electrónico</p>
-                            <p><i class="icon_check"></i> Ancho de Banda Ilimitado</p>
-                            <p><i class="icon_check"></i> Incluye SSL Básico*</p>
-                        </div>
-                        <!-- View All Feature Button -->
-                    </div>
-                </div>
-
-                <!-- Single Price Plan -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-price-plan active mb-100">
-                        <!-- Popular Tag -->
-                        <div class="popular-tag">
-                            <i class="icon_star"></i> El Mejor <i class="icon_star"></i>
-                        </div>
-                        <!-- Title -->
-                        <div class="price-plan-title">
-                            <h4>Premium</h4>
-                            <p>Opción Recomendada</p>
-                        </div>
-                        <!-- Value -->
-                        <div class="price-plan-value">
-                            <h2><span>$</span>200</h2>
-                            <p>/ Mes</p>
-                        </div>
-                        <!-- Button -->
-                        <a href="#" class="btn hami-btn w-100 mb-30">Seleccionar</a>
-                        <!-- Description -->
-                        <div class="price-plan-desc">
-                            <p><i class="icon_check"></i> 5 Sitios Web</p>
-                            <p><i class="icon_check"></i> 50 Correos Electrónicos</p>
-                            <p><i class="icon_check"></i> SSD 50GB</p>
-                            <p><i class="icon_check"></i> Ancho de Banda Ilimitado</p>
-                            <p><i class="icon_check"></i> Cuota SSD Ilimitada</p>
-                            <p><i class="icon_check"></i> SSL Autogestionado </p>
-                            <p><i class="icon_check"></i> Acceso SSH / SFTP </p>
-                            <p><i class="icon_check"></i> Respaldos Diarios </p>
+  <!-- Inicio. radio hosting USAstreams.com html5 player -->
+<!-- Licencia: GRATIS-XDF4543ERF -->
+<div style = "bottom: 0;display: flex;height: 80px;left: 0;position: fixed;right: 0;width: 100%;z-index: 1500;overflow: hidden;" >
+<iframe name="contenedorPlayer" class="cuadroBordeado" allow="autoplay" width="100%" height="80px" marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no  src="https://cp.usastreams.com/html5-player-barra-omega.aspx?stream=https://stream.streamaudio.de:8000/noize-nacion-radio&fondo=05&formato=mpeg&color=3&titulo=2&autoStart=1&vol=10&nombre=Noize+Naci%c3%b3n&imagen=https://cp.usastreams.com/playerHTML5/img/cover.png&server=https://stream.streamaudio.de:8000/status.xslCHUMILLASmount=/noize-nacion-radio"></iframe></div>
+<!-- En players responsive puede modificar el weight a sus necesidades, Por favor no modifique el resto del codigo para poder seguir ofreciendo este servicio gratis  -->
+<!-- Fin. USAstreams.com html5 player -->
 
 
 
-                        </div>
-                        <!-- View All Feature Button -->
-                    </div>
-                </div>
 
-                <!-- Single Price Plan -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-price-plan mb-100">
-                        <!-- Title -->
-                        <div class="price-plan-title">
-                            <h4>Ilimitado</h4>
-                            <p></p>
-                        </div>
-                        <!-- Value -->
-                        <div class="price-plan-value">
-                            <h2><span></span> $1500 </h2>
-                            <p></p>
-                        </div>
-                        <!-- Button -->
-                        <a href="#" class="btn hami-btn w-100 mb-30">Seleccionar</a>
-                        <!-- Description -->
-                        <div class="price-plan-desc">
-                            <p><i class="icon_check"></i> Sitios Ilimitados</p>
-                            <p><i class="icon_check"></i> Correos Ilimitados</p>
-                            <p><i class="icon_check"></i> Ancho de Banda Ilimitado</p>
-                            <p><i class="icon_check"></i> Cuota SSD Ilimitada</p>
-                            <p><i class="icon_check"></i> SSL 256-bit, X.509 </p>
-                            <p><i class="icon_check"></i> Acceso SSH / SFTP </p>
-                            <p><i class="icon_check"></i> Respaldos Diarios </p>
-                        </div>
-                        <!-- View All Feature Button -->
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </section>
-    <!-- Price Plan Area End -->
 
-    <!-- Call To Action Area Start -->
-    <section class="hami-call-to-action bg-gray section-padding-100-0">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-6">
-                    <div class="cta-thumbnail mb-100">
-                        <img src="img/bg-img/2.png" alt="">
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="cta--content mb-100">
-                        <h2>Contrata hoy con el 70% de Descuento!</h2>
-                        <!-- Description -->
-                        <div class="cta-desc mb-50">
-                            <h6><i class="icon_check"></i> Dominio Gratuito</h6>
-                            <h6><i class="icon_check"></i> Email Gratuito</h6>
-                            <h6><i class="icon_check"></i> Almacenamiento SSD</h6>
-                            <h6><i class="icon_check"></i> Plantilla para tu Negocio / Proyecto</h6>
-                            <h6><i class="icon_check"></i> SEO</h6>
-                            <h6><i class="icon_check"></i> Bases de Datos Ilimitadas</h6>
-                        </div>
-                        <!-- Button -->
-                        <a href="#" class="btn hami-btn">Solicitar Cotización</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Call To Action Area End -->
+<!-- Footer -->
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
 
-    <!-- Support Area Start -->
-    <section class="hami-support-area bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="support-text">
-                        <h2>Aún tienes Dudas? Llama al: +52 861 798 93 75</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Support Pattern -->
-        <div class="support-pattern" style="background-image: url(img/core-img/support-pattern.png);"></div>
-    </section>
-    <!-- Support Area End -->
-
-    <!-- Call To Action Area Start -->
-    <section class="hami-cta-area">
-        <div class="container">
-            <div class="cta-text">
-                <h2>Area57 Hostea <span class="counter">200</span> Sitios / Proyectos / Empresas desde 2019</h2>
-            </div>
-        </div>
-    </section>
-    <!-- Call To Action Area End -->
-
-    <!-- Footer Area Start -->
-    <footer class="footer-area section-padding-80-0">
-
-        <!-- Main Footer Area -->
-        <div class="main-footer-area">
-            <div class="container">
-                <div class="row justify-content-between">
-
-                    <!-- Single Footer Widget Area -->
-                   
-
-                    <!-- Single Footer Widget Area -->
-                    <div class="col-6 col-sm-4 col-lg-2">
-                        <div class="single-footer-widget mb-80">
-                            <!-- Widget Title -->
-                            <h5 class="widget-title">Desarrollo Web</h5>
-
-                            <!-- Footer Nav -->
-                            <ul class="footer-nav">
-                                <li><a href="#">Diseño Web</a></li>
-                                <li><a href="#">Desarrollo Web Full Stack</a></li>
-                                <li><a href="#">PWA App</a></li>
-                                <li><a href="#">Android App</a></li>
-                                <li><a href="#">Media Services (Linux Icecast)</a></li>
-                                <li><a href="#"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget Area -->
-                    <div class="col-6 col-sm-4 col-lg-2">
-                        <div class="single-footer-widget mb-80">
-                            <!-- Widget Title -->
-                            <h5 class="widget-title">Productos</h5>
-
-                            <!-- Footer Nav -->
-                            <ul class="footer-nav">
-                                <li><a href="#">Hosting Compartido</a></li>
-                                <li><a href="#">Hosting VPS</a></li>
-                                <li><a href="#">Hosting Dedicado</a></li>
-                                <li><a href="#">Plane Reseller</a></li>
-                                <li><a href="#">Desarrollo Web</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget Area -->
-                    <div class="col-6 col-sm-4 col-lg-2">
-                        <div class="single-footer-widget mb-80">
-                            <!-- Widget Title -->
-                            <h5 class="widget-title">Información</h5>
-
-                            <!-- Footer Nav -->
-                            <ul class="footer-nav">
-                                <li><a href="#">Acerca De:</a></li>
-                                <li><a href="#">Co-work</a></li>
-                                <li><a href="#">Contacto</a></li>
-                                <li><a href="#">Términos y Condiciones</a></li>
-                                <li><a href="#">Politica de Privacidad</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget Area -->
-                    <div class="col-12 col-sm-8 col-lg-4">
-                        <div class="single-footer-widget mb-80">
-                            <!-- Widget Title -->
-                            <h5 class="widget-title">Redes Sociales</h5>
-
-                            <p>Conoce más sobre Area 57</p>
-
-                            <!-- Newsletter Form -->
-                           
-
-                            <!-- Social Info -->
-                            <div class="social-info">
-                                <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#" class="google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                <a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                <a href="#" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Bottom Footer Area -->
-        <div class="bottom-footer-area bg-gray">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-12 col-md-6">
-                        <!-- Copywrite Text -->
-                        <div class="copywrite-text">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> Derechos Reservados | Area57 <!-- <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>-->
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</p>
-<div><p>Saltillo Coahuila, México</p></div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <!-- Payment Methods -->
-                        <div class="payments-methods d-flex align-items-center">
-                            <p>Tipos de Pago Disponibles:</p>
-                            <i class="fa fa-cc-visa" aria-hidden="true"></i>
-                            <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
-                            <i class="fa fa-cc-discover" aria-hidden="true"></i>
-                            <i class="fa fa-cc-amex" aria-hidden="true"></i>
-                            <i class="fa fa-cc-paypal" aria-hidden="true"></i>
-                            <i class="fa fa-cc-stripe" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer Area End -->
-
-    <!-- **** All JS Files ***** -->
-    <!-- jQuery 2.2.4 -->
-    <script src="js/jquery.min.js"></script>
-    <!-- Popper -->
-    <script src="js/popper.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- All Plugins -->
-    <script src="js/hami.bundle.js"></script>
-    <!-- Active -->
-    <script src="js/default-assets/active.js"></script>
-
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<script src="//code.tidio.co/eaicy4fexrlrhx5nhsaa8gk4mha2bor9.js" async></script>
 </body>
-
 </html>

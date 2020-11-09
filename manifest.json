@@ -3,49 +3,45 @@
     "short_name":"Area57",
     "description":"Area 57 Desarrollo Web y Hosting en la Nube",
     "lang":"es-ES",
-    "start_url":"/",
+    "start_url":"/index.html",
     "display":"standalone",
     "orientation":"any",
     "background_color":"#06181D",
     "theme_color":"#06181D",
     "icons":[  
        {  
-          "src":"https://www.noizenacion.com/assets/img/noizenacion_pwa.png",
+          "src":"",
           "sizes":"150x150",
           "type":"image/png"
        },
        {  
-          "src":"https://www.noizenacion.com/assets/img/noizenacion_pwa.png",
+          "src":"https://area57.space/pwa/default.png",
           "sizes":"300x300",
           "type":"image/png"
        },
        {  
-          "src":"https://www.noizenacion.com/assets/img/noizenacion_pwa.png",
+          "src":"https://area57.space/pwa/icon-512x512.png",
           "sizes":"512x512",
           "type":"image/png"
        },
+
        {  
-          "src":"https://www.noizenacion.com/assets/img/noizenacion_pwa.png",
-          "sizes":"300x300",
+          "src":"https://area57.space/pwa/icon-384x384.png",
+          "sizes":"384x380",
           "type":"image/png"
        },
        {  
-          "src":"https://www.noizenacion.com/assets/img/noizenacion_pwa.png",
-          "sizes":"370x370",
-          "type":"image/png"
-       },
-       {  
-          "src":"https://www.noizenacion.com/assets/img/noizenacion_pwa.png",
+          "src":"https://area57.space/pwa/icon-270x270.png",
           "sizes":"270x270",
           "type":"image/png"
        },
        {  
-          "src":"https://www.noizenacion.com/assets/img/noizenacion_pwa.png",
+          "src":"https://area57.space/pwa/icon-180x180.png",
           "sizes":"180x180",
           "type":"image/png"
        },
        {  
-          "src":"https://www.noizenacion.com/assets/img/nnicon32x32.png",
+          "src":"https://area57.space/pwa/icon-32x32.png",
           "sizes":"32x32",
           "type":"image/png"
        }

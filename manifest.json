@@ -1,33 +1,54 @@
-{
-    "theme_color": "#06181d",
-    "background_color": "#617074",
-    "display": "standalone",
+{  
+    "name":"Area 57 Web Development - Cloud Services",
+    "short_name":"Area57.space",
+    "description":"Area 57 Desarrollo Web y Hosting en la Nube",
     "lang":"es-ES",
-    "scope":"/",
+    "dir":"ltr",
     "start_url":"/",
-    "app_name": "Area 57 Web Development - Cloud Services",
-    "short_name": "Area57",
-    "description": "Area 57 Desarrollo Web y Hosting en la Nube",
-    "icons": [
-        {
-            "src": "./pwa/icon-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "./pwa/icon-256x256.png",
-            "sizes": "256x256",
-            "type": "image/png"
-        },
-        {
-            "src": "./pwa/icon-384x384.png",
-            "sizes": "384x384",
-            "type": "image/png"
-        },
-        {
-            "src": "./pwa/icon-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
+    "display":"standalone",
+    "orientation":"any",
+    "background_color":"#06181d",
+    "theme_color":"#06181d",
+    "icons":[  
+       {  
+          "src":"https://www.noizenacion.com/assets/img/noizenacion_pwa.png",
+          "sizes":"150x150",
+          "type":"image/png"
+       },
+       {  
+          "src":"https://www.noizenacion.com/assets/img/noizenacion_pwa.png",
+          "sizes":"300x300",
+          "type":"image/png"
+       },
+       {  
+          "src":"https://www.noizenacion.com/assets/img/noizenacion_pwa.png",
+          "sizes":"512x512",
+          "type":"image/png"
+       },
+       {  
+          "src":"https://www.noizenacion.com/assets/img/noizenacion_pwa.png",
+          "sizes":"300x300",
+          "type":"image/png"
+       },
+       {  
+          "src":"https://www.noizenacion.com/assets/img/noizenacion_pwa.png",
+          "sizes":"370x370",
+          "type":"image/png"
+       },
+       {  
+          "src":"https://www.noizenacion.com/assets/img/noizenacion_pwa.png",
+          "sizes":"270x270",
+          "type":"image/png"
+       },
+       {  
+          "src":"https://www.noizenacion.com/assets/img/noizenacion_pwa.png",
+          "sizes":"180x180",
+          "type":"image/png"
+       },
+       {  
+          "src":"https://www.noizenacion.com/assets/img/nnicon32x32.png",
+          "sizes":"32x32",
+          "type":"image/png"
+       }
     ]
-}
+ }

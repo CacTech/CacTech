@@ -10,7 +10,7 @@
     "theme_color":"#06181D",
     "icons":[  
        {  
-          "src":"",
+          "src":"https://area57.space/pwa/default.png",
           "sizes":"150x150",
           "type":"image/png"
        },

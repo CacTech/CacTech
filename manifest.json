@@ -3,7 +3,6 @@
     "background_color": "#617074",
     "display": "standalone",
     "lang":"es-ES",
-    "dir":"ltr",
     "start_url": "/",
     "app_name": "Area 57 Web Development - Cloud Services",
     "short_name": "Area57",

@@ -1,44 +1,20 @@
-{  
-    "name":"Area 57 Web Development - Cloud Services",
-    "short_name":"Area57",
-    "description":"Area 57 Desarrollo Web y Hosting en la Nube",
-    "lang":"es-ES",
-    "start_url":"index.html",
-    "display":"standalone",
-    "orientation":"any",
-    "background_color":"#06181D",
-    "theme_color":"#06181D",
-    "icons":[  
-       {  
-          "src":"https://area57.space/pwa/icon-150x150.png",
-          "sizes":"150x150",
-          "type":"image/png"
-       },
-       {  
-          "src":"https://area57.space/pwa/icon-300x300.png",
-          "sizes":"300x300",
-          "type":"image/png"
-       },
-       {  
-          "src":"https://area57.space/pwa/icon-512x512.png",
-          "sizes":"512x512",
-          "type":"image/png"
-       },
-
-       {  
-          "src":"https://area57.space/pwa/icon-384x384.png",
-          "sizes":"384x384",
-          "type":"image/png"
-       },
-       {  
-          "src":"https://area57.space/pwa/180x180.png",
-          "sizes":"180x180",
-          "type":"image/png"
-       },
-       {  
-          "src":"https://area57.space/pwa/32x32.png",
-          "sizes":"32x32",
-          "type":"image/png"
-       }
-    ]
+{
+   "name": "Board",
+   "short_name": "Board",
+   "icons": [
+     {
+       "src": "public/sw-Board-192x192.png",
+       "type": "image/png",
+       "sizes": "192x192"
+     }
+   ],
+   "start_url": ".",
+   "scope": "/",
+   "display": "standalone",
+   "orientation": "any",
+   "background_color": "#303030",
+   "theme_color": "#212121",
+   "description": "SLA Monitoring Tool",
+   "dir": "ltr",
+   "lang": "en-US"
  }

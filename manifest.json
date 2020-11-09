@@ -8,8 +8,7 @@
        "sizes": "512x512"
      }
    ],
-   "start_url": ".",
-   "scope": ".",
+   "start_url": "/",
    "display": "standalone",
    "orientation": "any",
    "background_color": "#303030",

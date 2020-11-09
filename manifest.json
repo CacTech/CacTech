@@ -5,10 +5,10 @@
     "lang":"es-ES",
     "dir":"ltr",
     "start_url":"/",
-    "display":"standalone",
+    "display":"minimal ui",
     "orientation":"any",
-    "background_color":"#06181d",
-    "theme_color":"#06181d",
+    "background_color":"#06181D",
+    "theme_color":"#06181D",
     "icons":[  
        {  
           "src":"https://www.noizenacion.com/assets/img/noizenacion_pwa.png",

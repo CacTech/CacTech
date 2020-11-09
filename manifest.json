@@ -1,10 +1,10 @@
 {  
     "name":"Area 57 Web Development - Cloud Services",
-    "short_name":"Area57.space",
+    "short_name":"Area57",
     "description":"Area 57 Desarrollo Web y Hosting en la Nube",
     "lang":"es-ES",
     "dir":"ltr",
-    "start_url":"/",
+    "start_url":"index.html",
     "display":"standalone",
     "orientation":"any",
     "background_color":"#06181D",

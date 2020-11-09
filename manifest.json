@@ -10,12 +10,12 @@
     "theme_color":"#06181D",
     "icons":[  
        {  
-          "src":"https://area57.space/pwa/default.png",
+          "src":"https://area57.space/pwa/icon-150x150.png",
           "sizes":"150x150",
           "type":"image/png"
        },
        {  
-          "src":"https://area57.space/pwa/default.png",
+          "src":"https://area57.space/pwa/icon-300x300.png",
           "sizes":"300x300",
           "type":"image/png"
        },
@@ -27,12 +27,7 @@
 
        {  
           "src":"https://area57.space/pwa/icon-384x384.png",
-          "sizes":"384x380",
-          "type":"image/png"
-       },
-       {  
-          "src":"https://area57.space/pwa/icon-270x270.png",
-          "sizes":"270x270",
+          "sizes":"384x384",
           "type":"image/png"
        },
        {  
@@ -41,7 +36,7 @@
           "type":"image/png"
        },
        {  
-          "src":"https://area57.space/pwa/icon-32x32.png",
+          "src":"https://area57.space/pwa/32x32.png",
           "sizes":"32x32",
           "type":"image/png"
        }

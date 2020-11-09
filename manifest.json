@@ -3,7 +3,7 @@
     "short_name":"Area57",
     "description":"Area 57 Desarrollo Web y Hosting en la Nube",
     "lang":"es-ES",
-    "start_url":"./",
+    "start_url":"/",
     "display":"standalone",
     "orientation":"any",
     "background_color":"#06181D",

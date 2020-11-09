@@ -1,5 +1,4 @@
 (function ($) {
-    'use strict';
 
     var hami_window = $(window);
 

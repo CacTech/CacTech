@@ -1,37 +1,22 @@
-/*global app, $on */
-(function () {
-	'use strict';
+self.addEventListener('install', function (event) {
+  //Install now, rather than when all tabs with TodoMVC open are closed
+  self.skipWaiting();
+});
 
-	/**
-	 * Sets up a brand new Todo list.
-	 *
-	 * @param {string} name The name of your new to do list.
-	 */
-	function Todo(name) {
-		this.storage = new app.Store(name);
-		this.model = new app.Model(this.storage);
-		this.template = new app.Template();
-		this.view = new app.View(this.template);
-		this.controller = new app.Controller(this.model, this.view);
-	}
-
-	var todo = new Todo('todos-vanillajs');
-
-	function setView() {
-		todo.controller.setView(document.location.hash);
-	}
-
-	$on(window, 'load', function () {
-		setView();
-		if ('serviceWorker' in navigator) {
-			//Let's register the ServiceWorker
-			navigator.serviceWorker.register('/sw.js').then(function () {
-				//We're good to go
-				console.log("ServiceWorker registered correctly.");
-			}).catch(function (err) {
-				console.log("ServiceWorker registration failed: " + err);
-			});
-		}
-	});
-	$on(window, 'hashchange', setView);
-})();
+//Netlify doesn't expose the bundled URLs, so we have to cache by intercepting fetch requests
+//We'll assume the application is never updated and simple cache each request
+//Modified version of the code given on MDN
+self.addEventListener('fetch', function (event) {
+  event.respondWith(
+    caches.match(event.request).then(function (resp) {
+      //Either respond from the cache, or fetch it, cache it and then serve it
+      return resp  || fetch(event.request).then(function (response) {
+        return caches.open('v1').then(function (cache) {
+          //We have to clone the request as it can only be read once
+          cache.put(event.request, response.clone());
+          return response;
+        });
+      });
+    })
+  )
+});

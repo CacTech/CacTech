@@ -24,7 +24,7 @@
 
 {
 "matches": ["http://*/*"],
-"js": ["/sw.js", "/js/*"],
+"js": ["/sw.js", "/js/"],
 "css": [],
 "all_frames":true
 }

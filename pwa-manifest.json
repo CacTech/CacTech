@@ -20,6 +20,5 @@
     "theme_color": "#000000",
     "display": "standalone",
     "orientation": "portrait",
-    "start_url": "https:\/\/area57.space\/",
-    "scope": "https:\/\/area57.space\/"
+    "start_url": "https:\/\/area57.space\/"
 }

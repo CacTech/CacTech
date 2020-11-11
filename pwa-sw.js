@@ -7,11 +7,11 @@ const BASE_CACHE_FILES = [
 ];
 
 const OFFLINE_CACHE_FILES = [
-     'https://noizenacion.com/',
+     'https://area57.space/',
 ];
 
 const NOT_FOUND_CACHE_FILES = [
-    './404.html',
+    'https://area57.space/',
 ];
 
 const OFFLINE_PAGE = 'https://area57.space/offline.html';

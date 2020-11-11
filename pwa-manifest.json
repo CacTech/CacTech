@@ -10,7 +10,7 @@
             "purpose": "any maskable"
         },
         {
-            "src": "https:\/\/area57.space\/icon-512x512.png",
+            "src": "https:\/\/area57.space\/pwa\/icon-512x512.png",
             "sizes": "512x512",
             "type": "image\/png",
             "purpose": "any maskable"
@@ -20,5 +20,5 @@
     "theme_color": "#000000",
     "display": "standalone",
     "orientation": "portrait",
-    "start_url": "https:\/\/area57.space\/"
+    "start_url": "/"
 }

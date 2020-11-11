@@ -1,8 +1,8 @@
 const CACHE_VERSION = '1.7.22';
 
 const BASE_CACHE_FILES = [
-    'https://area57.space/pwa/icon-512x512.png',
-'https://area57.space/icon-512x512.png',
+'https://area57.space/pwa/icon-512x512.png',
+'https://area57.space/pwa/icon-512x512.png',
 
 ];
 
@@ -46,7 +46,7 @@ const CACHE_BLACKLIST =  [
 //        return !str.includes('/wp-admin/') || !str.startsWith('https://area57.space//');
 //    },
 ];
-const neverCacheUrls = [/\/admin/,/\/login/,/\/cart/,/ajax/,/login/,];
+const neverCacheUrls = [/\/admin/,/\/login/,/\/cart/,/ajax/,/login/];
 
 
 const SUPPORTED_METHODS = [

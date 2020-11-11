@@ -7,7 +7,7 @@ const BASE_CACHE_FILES = [
 ];
 
 const OFFLINE_CACHE_FILES = [
-     '',
+     'https://area57.space/pwa/',
 ];
 
 const NOT_FOUND_CACHE_FILES = [

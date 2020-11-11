@@ -7,15 +7,15 @@ const BASE_CACHE_FILES = [
 ];
 
 const OFFLINE_CACHE_FILES = [
-     'https://area57.space/offline.html',
+     'https://area57.space/',
 ];
 
 const NOT_FOUND_CACHE_FILES = [
     'https://area57.space/offline.html',
 ];
 
-const OFFLINE_PAGE = 'https://area57.space/';
-const NOT_FOUND_PAGE = 'https://area57.space/';
+const OFFLINE_PAGE = 'https://area57.space/offline.html';
+const NOT_FOUND_PAGE = 'https://area57.space/404.html';
 
 const CACHE_VERSIONS = {
     content: 'content-v' + CACHE_VERSION,
@@ -610,7 +610,7 @@ self.addEventListener(
         // Return if request url protocal isn't http or https
         if ( ! event.request.url.match(/^(http|https):\/\//i) )
             return;
-        if ( event.request.referrer.match(/^(wp-admin):\/\//i) )
+        if ( event.request.referrer.match(/^(index.html):\/\//i) )
             return;
                        
         if ( new URL(event.request.url).origin !== location.origin )

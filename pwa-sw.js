@@ -610,7 +610,7 @@ self.addEventListener(
         // Return if request url protocal isn't http or https
         if ( ! event.request.url.match(/^(http|https):\/\//i) )
             return;
-        if ( event.request.referrer.match(/^(index.html):\/\//i) )
+        if ( event.request.referrer.match(/^():\/\//i) )
             return;
                        
         if ( new URL(event.request.url).origin !== location.origin )

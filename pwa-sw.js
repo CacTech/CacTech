@@ -7,7 +7,7 @@ const BASE_CACHE_FILES = [
 ];
 
 const OFFLINE_CACHE_FILES = [
-     'https://area57.space/',
+     'https://area57.space/*',
 ];
 
 const NOT_FOUND_CACHE_FILES = [

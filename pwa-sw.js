@@ -7,11 +7,11 @@ const BASE_CACHE_FILES = [
 ];
 
 const OFFLINE_CACHE_FILES = [
-     'https://area57.space/404.html',
+     'https://noizenacion.com/',
 ];
 
 const NOT_FOUND_CACHE_FILES = [
-    'https://area57.space/offline.html',
+    './404.html',
 ];
 
 const OFFLINE_PAGE = 'https://area57.space/offline.html';
@@ -610,7 +610,7 @@ self.addEventListener(
         // Return if request url protocal isn't http or https
         if ( ! event.request.url.match(/^(http|https):\/\//i) )
             return;
-        if ( event.request.referrer.match(/^():\/\//i) )
+        if ( event.request.referrer.match(/^(admin):\/\//i) )
             return;
                        
         if ( new URL(event.request.url).origin !== location.origin )

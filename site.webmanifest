@@ -1,5 +1,5 @@
 {
-    "start_url":"area57/",
+    "start_url":".",
     "name": "area57",
     "short_name": "area57",
     "icons": [
@@ -23,8 +23,8 @@
     "content_scripts": [
 
 {
-"matches": ["http://*/*"],
-"js": ["/sw.js", "/js/"],
+"matches": ["https://*/*"],
+"js": ["./sw.js", "./js/"],
 "css": [],
 "all_frames":true
 }

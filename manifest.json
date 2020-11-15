@@ -3,7 +3,7 @@
    "short_name": "APP",
    "icons": [
      {
-       "src": "https://area57.space/pwa/icon-512x512.png",
+       "src": "https://cactech.net/pwa/icon-512x512.png",
        "type": "image/png",
        "sizes": "512x512"
      }

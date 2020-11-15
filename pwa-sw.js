@@ -1,21 +1,21 @@
 const CACHE_VERSION = '1.7.22';
 
 const BASE_CACHE_FILES = [
-'https://area57.space/pwa/icon-512x512.png',
-'https://area57.space/pwa/icon-512x512.png',
+'https://cactech.net/pwa/icon-512x512.png',
+'https://cactech.net/pwa/icon-512x512.png',
 
 ];
 
 const OFFLINE_CACHE_FILES = [
-     'https://area57.space/',
+     'https://cactech.net/',
 ];
 
 const NOT_FOUND_CACHE_FILES = [
-    'https://area57.space/',
+    'https://cactech.net/',
 ];
 
-const OFFLINE_PAGE = 'https://area57.space/offline.html';
-const NOT_FOUND_PAGE = 'https://area57.space/404.html';
+const OFFLINE_PAGE = 'https://cactech.net/offline.html';
+const NOT_FOUND_PAGE = 'https://cactech.net/404.html';
 
 const CACHE_VERSIONS = {
     content: 'content-v' + CACHE_VERSION,
@@ -43,7 +43,7 @@ const CACHE_STRATEGY = {
 
 const CACHE_BLACKLIST =  [
 //    (str) => {
-//        return !str.includes('/wp-admin/') || !str.startsWith('https://area57.space//');
+//        return !str.includes('/wp-admin/') || !str.startsWith('https://cactech.net//');
 //    },
 ];
 const neverCacheUrls = [/\/admin/,/\/login/,/\/cart/,/ajax/,/login/];

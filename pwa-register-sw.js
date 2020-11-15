@@ -1,4 +1,4 @@
-        var swsource = "https://area57.space/pwa-sw.js";                                          
+        var swsource = "https://cactech.net/pwa-sw.js";                                          
                                                                   
               function PWAforwpreadCookie(name) {
                   var nameEQ = name + "=";
@@ -12,7 +12,7 @@
               }
 			         if("serviceWorker" in navigator) {
                                      window.addEventListener('load', function() {			         		
-			                navigator.serviceWorker.register(swsource, {scope: 'https://area57.space/'}).then(function(reg){                                                                                        
+			                navigator.serviceWorker.register(swsource, {scope: 'https://cactech.net/'}).then(function(reg){                                                                                        
 			                    console.log('Congratulations!!Service Worker Registered ServiceWorker scope: ', reg.scope);
                                                                                                                     
 			                }).catch(function(err) {
